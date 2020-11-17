@@ -4,22 +4,22 @@ Popa Stefan Cristian
 
 IMPLEMENTATION DETAILS
 
-    Every mesh on screen is rendered using a single C++ object for every type
+Every mesh on screen is rendered using a single C++ object for every type
 of on-screen object and moved to the desired position using a model matrix.
 Every object has its own header and cpp file with its class implementation.
 The general game logic is written in BowArrow.cpp, in the Update() method.
 
-    Baloons and shurikens are spawned randomly. Red ballons have the highest
+Baloons and shurikens are spawned randomly. Red ballons have the highest
 chance of appearing, then yellow, blue and finally pink. Shurikens can have
 different sizes, within a certain limit, with bigger shurikens moving slower
 than smaller ones.
 
-    Each object also has a properties struct which keeps all the relevant
+Each object also has a properties struct which keeps all the relevant
 information for that type of object. This way, to render all the object of a
 certain type we just have to iterate through the array of properties of that
 object type.
 
-    Every frame, we have to draw:
+Every frame, we have to draw:
 
  - the bow: the string moves further back the more we charge the arrow. It can
 move up and down and it always points to the mouse cursor. The string is
